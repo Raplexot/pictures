@@ -3,10 +3,11 @@ import Venus from '../../images/Venus.jpg'
 import dinner from '../../images/dinner.jpg'
 import creation from '../../images/creation.jpeg'
 import anatomy from '../../images/Anatomy.jpg'
+import tick from '../../images/tick.jpg'
 const Paintings = (): JSX.Element => {
     return (
         <div className="paintingsContainer">
-            <div className="paintingsTitle">Картины эпохи возрождения</div>
+            <div className="paintingsTitle">Картины эпохи Возрождения</div>
 
             <div className="paintings">
                 <div className="picture">
@@ -47,7 +48,7 @@ const Paintings = (): JSX.Element => {
                                 <div className="firsPrice">6 000 000$</div>
                                 <div className="newPrice">5 000 000$</div>
                             </div>
-                            <button className="buyButton">Купить</button>
+                            <button className="buyButton">✓ В корзине</button>
                         </div>
                     </div>
                 </div>

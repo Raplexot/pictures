@@ -1,0 +1,73 @@
+.footerContainer {
+    background-color: #F6F3F3;
+    width: 100%;
+    margin-left: auto;
+    position: absolute;
+    z-index: 1000;
+    height: 110px;
+    margin-top:340px;
+    left: 0;
+    right: 0;
+    bottom:0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(177, 177, 177);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    .logoLinks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        .logo {
+            margin-left: 310px;
+            width: 70px;
+        }
+        .links {
+            font-size: 20px;
+            vertical-align: middle;
+            text-align: center;
+    
+            .nav {
+                margin-left: 50px;
+                text-decoration: none;
+                color: black;
+            }
+        }
+    }
+    .contacts {
+        margin-right: 310px;
+        display:flex;
+        
+        .phone{
+            width:20px;
+        }
+        .jps{
+            margin-left: 20px;
+            width:35px
+        }
+        .phoneNumber {
+            
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+        .adress{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+        }
+        .findButton {
+            border: none;
+            outline: none;
+            width: 100px;
+            height: 50px;
+            background-color: #403432;
+            color: white;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: all 0.1s;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}

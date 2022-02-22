@@ -1,12 +1,13 @@
 .paintingsContainer {
     position: relative;
-    top: 100px;
+    top: 55px;
     width: 100%;
 
     .paintingsTitle {
         font-size: 25px;
         font-family: Georgia, 'Times New Roman', Times, serif;
         margin-left: 310px;
+        font-weight: 500;
     }
     .paintings {
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -58,10 +59,17 @@
                         height: 50px;
                         background-color: #403432;
                         color: white;
-                        font-size: 20px;
+                        font-size: 15px;
                         transition: all 0.1s;
                         &:hover {
                             opacity: 0.8;
+                        }
+                    }
+                    .bought{
+                        display:flex;
+                        .tick{
+                            width:10px;
+                            height:15px
                         }
                     }
                 }
