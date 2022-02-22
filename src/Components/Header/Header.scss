@@ -1,0 +1,61 @@
+.headerContainer {
+    width: 100%;
+    margin-left: auto;
+    position: static;
+    z-index: 1000;
+    height: 110px;
+    top: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.5px solid rgb(177, 177, 177);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+    .logoLinks {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        .logo {
+            margin-left: 310px;
+            width: 70px;
+        }
+    }
+    .links {
+        font-size: 20px;
+        vertical-align: middle;
+        text-align: center;
+
+        .nav {
+            margin-left: 50px;
+            text-decoration: none;
+            color: black;
+        }
+    }
+    .finder {
+        margin-right: 310px;
+
+        .findInput {
+            width: 250px;
+            height: 45px;
+            text-align: center;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .findButton {
+            border: none;
+            outline: none;
+            width: 100px;
+            height: 50px;
+            background-color: #403432;
+            color: white;
+            font-size: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            transition: all 0.1s;
+            &:hover {
+                opacity: 0.8;
+            }
+        }
+    }
+}
