@@ -1,10 +1,10 @@
-import React from 'react';
+import React from 'react'
 import logo from '../../images/logo1.png'
 import phone from '../../images/phone.png'
 import jps from '../../images/jps.png'
 
 import './Footer.scss'
-const Footer = ():JSX.Element => {
+const Footer = (): JSX.Element => {
     return (
         <div className="footerContainer">
             <div className="logoLinks">
@@ -31,13 +31,13 @@ const Footer = ():JSX.Element => {
                 </nav>
             </div>
             <div className="contacts">
-                <img className="phone" src={phone}/>
+                <img className="phone" src={phone} />
                 <div className="phoneNumber">+380(99)999-99-99</div>
-                <img className='jps' src={jps}/>
-                <div className='adress'>г.Харьков,ул.Академика Павлова,24</div>
+                <img className="jps" src={jps} />
+                <div className="adress">г.Харьков,ул.Академика Павлова,24</div>
             </div>
         </div>
     )
 }
 
-export default Footer;
+export default Footer
