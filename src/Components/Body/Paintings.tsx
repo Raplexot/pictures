@@ -20,13 +20,9 @@ const Paintings = (): JSX.Element => {
     const { getPaint } = useActionsPaint()
     const { fetchApi } = useActionsApi()
 
-    
-
-       
-   
     return (
         <div className="paintingsContainer">
-    {/* <div>
+            {/* <div>
     <div id="mask"  className='mask'> <div className="loader"></div></div>
     </div> */}
             <div className="paintingsTitle">Картины эпохи Возрождения</div>
@@ -101,7 +97,7 @@ const Paintings = (): JSX.Element => {
                                 id="bought"
                                 className="buyButton"
                                 onClick={() => {
-                                     getPaint(3)
+                                    getPaint(3)
                                 }}
                             >
                                 {paint.paintings.includes(3)
