@@ -7,19 +7,38 @@ import { observer } from 'mobx-react-lite'
 import { useActionsApi, useActionsPaint } from '../Hooks/useActions'
 import { useTypedSelector } from '../Hooks/useTypedSelector'
 import { useEffect } from 'react'
+import { BuyButton } from './BuyButton'
 
 const Paintings = (): JSX.Element => {
-    // const toggle = (): void => {
-    //     const elem = document.getElementById('mask')!
-    //     elem.removeAttribute('hidden')
+    const toggle = (): void => {
+        const elem = document.getElementById('mask')!
+        elem.removeAttribute('hidden')
 
-    //     elem.setAttribute('hidden', 'false')
-    // }
+        elem.setAttribute('hidden', 'false')
+    }
     const paint = useTypedSelector((state) => state.paint)
     const api = useTypedSelector((state) => state.api)
     const { getPaint } = useActionsPaint()
     const { fetchApi } = useActionsApi()
 
+    // const pursache = (e: number): JSX.Element => {
+    //     useEffect(() => {
+    //         fetchApi()
+    //         getPaint(e)
+    //     }, [])
+
+    //     if (api.loading) {
+    //         return (
+    //             <div>
+    //                 <div id="mask" hidden={true} className="mask">
+    //                     {' '}
+    //                     <div className="loader"></div>
+    //                 </div>
+    //             </div>
+    //         )
+    //     }
+    //     return <div>✓ В корзине</div>
+    // }
     return (
         <div className="paintingsContainer">
             {/* <div>
@@ -38,15 +57,7 @@ const Paintings = (): JSX.Element => {
                                 <div className="firsPrice">2 000 000$</div>
                                 <div className="newPrice">1 000 000$</div>
                             </div>
-                            <button
-                                className="buyButton"
-                                id="one"
-                                onClick={() => getPaint(1)}
-                            >
-                                {paint.paintings.includes(1)
-                                    ? '✓ В корзине'
-                                    : 'Купить'}
-                            </button>
+                            <BuyButton num={1} />
                         </div>
                     </div>
                 </div>
@@ -60,23 +71,8 @@ const Paintings = (): JSX.Element => {
                                 <div className="newPrice">3 000 000$</div>
                             </div>
 
-                            <button
-                                className="buyButton"
-                                onClick={() => getPaint(2)}
-                            >
-                                <div>
-                                    <div id="mask" className="mask">
-                                        {' '}
-                                        <div
-                                            hidden={true}
-                                            className="loader"
-                                        ></div>
-                                    </div>
-                                </div>{' '}
-                                {paint.paintings.includes(2)
-                                    ? '✓ В корзине'
-                                    : 'Купить'}
-                            </button>
+                            <BuyButton num={2} />
+
                         </div>
                     </div>
                 </div>
@@ -93,17 +89,8 @@ const Paintings = (): JSX.Element => {
                             <button id="buy" hidden className="buyButton">
                                 ✓ В корзине
                             </button>
-                            <button
-                                id="bought"
-                                className="buyButton"
-                                onClick={() => {
-                                    getPaint(3)
-                                }}
-                            >
-                                {paint.paintings.includes(3)
-                                    ? '✓ В корзине'
-                                    : 'Купить'}
-                            </button>
+                            <BuyButton num={4} />
+
                         </div>
                     </div>
                 </div>

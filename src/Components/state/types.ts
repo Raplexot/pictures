@@ -12,6 +12,7 @@ export enum ApiActionTypes {
 
 export interface PaintingState {
     paintings: Array<number>
+    modyfied: boolean
 }
 
 export enum PaintingActionTypes {

@@ -2,6 +2,7 @@ import { PaintingAction, PaintingActionTypes, PaintingState } from './types'
 
 const initialState: PaintingState = {
     paintings: [],
+    modyfied: false,
 }
 
 export const paintingsReducer = (
@@ -10,8 +11,14 @@ export const paintingsReducer = (
 ): PaintingState => {
     switch (action.type) {
         case PaintingActionTypes.FETCH_PAINTINGS:
-            return { paintings:!state.paintings.includes(action.payload)?
-                [...state.paintings, action.payload]:state.paintings }
+            return !state.paintings.includes(action.payload) ? {
+                paintings: [...state.paintings, action.payload],
+                modyfied: true
+            }
+                : {
+                    paintings: [...state.paintings],
+                    modyfied: false
+                }
 
         default:
             return state
